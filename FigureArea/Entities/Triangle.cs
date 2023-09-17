@@ -21,13 +21,14 @@ namespace FigureArea.Entities
             double hypotenuse;
             double otherA;
             double otherB;
-            if (SideA > SideB && SideA > SideC)
+
+            if (SideA >= SideB && SideA >= SideC)
             {
                 hypotenuse = SideA;
                 otherA = SideB;
                 otherB = SideC;
             }
-            else if (SideB > SideA && SideB > SideC)
+            else if (SideB >= SideA && SideB >= SideC)
             {
                 hypotenuse = SideB;
                 otherA = SideC;
@@ -39,6 +40,8 @@ namespace FigureArea.Entities
                 otherA = SideA;
                 otherB = SideB;
             }
+
+            return new Square(hypotenuse).GetArea() == new Square(otherA).GetArea() + new Square(otherB).GetArea(); 
         }
 
         public override double GetArea()

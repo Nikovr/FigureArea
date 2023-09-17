@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FigureArea.Entities;
 
 namespace FigureArea.Services
 {
-    internal interface IFugureAreaService
+    public interface IFigureAreaService
     {
+        Circle CreateCircle(double radius);
+        Triangle CreateTriangle(double sideA, double sideB, double sideC);
+        Square CreateSquare(double side);
+        double CalculateArea(Figure figure);
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FigureArea.Exceptions
 {
-    internal class InvalidFigureException
+    public class InvalidFigureException : FigureException
     {
+        public InvalidFigureException(string? message) : base("can not create figure - " + message)
+        {
+        }
     }
 }

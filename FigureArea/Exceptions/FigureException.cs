@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FigureArea.Exceptions
 {
-    internal class FigureException
+    public class FigureException : Exception
     {
+        public FigureException(string? message) : base("FigureArea Error: " + message)
+        {
+        }
     }
 }
